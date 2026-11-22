@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import chrisImg from '../../public/chris.jpg';
 
 export const Header = () => {
   return (
@@ -15,7 +14,7 @@ export const Header = () => {
         </div>
         <div className="flex items-center">
           <span className="text-sm mr-4">empathy</span>
-          <img src={chrisImg} alt="Profile Picture" className="h-8 rounded-full" />
+          <img src="/chris.jpg" alt="Profile Picture" className="h-8 rounded-full" />
         </div>
       </div>
     </div>

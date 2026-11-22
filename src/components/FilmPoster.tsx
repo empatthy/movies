@@ -9,7 +9,7 @@ export const FilmPoster = ({ poster, movieId }: FilmPosterProps) => {
   return (
     <Link 
       to={`/movies/${movieId}`} 
-      className="block h-[225px] border border-[#676a6e] rounded-sm overflow-hidden"
+      className="block h-[225px] border border-[#2d3030] rounded-sm overflow-hidden"
     >
         <img 
           src={poster} 

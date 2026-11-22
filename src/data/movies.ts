@@ -1,10 +1,15 @@
-export const movies = [
+import type { Movie } from "../types/Movie";
+
+export const movies: Movie[] = [
     {
         id: 1,
         title: 'The Dark Knight',
         year: 2008,
         director: 'Christopher Nolan',
-        poster: '/poster1.jpg',
+        poster: '/posters/the-dark-knight-2008-poster.jpg',
+        shots: ['/shots/the-dark-knight-2008-shot.jpg', '/shots/the-dark-knight-2008-shot1.jpg', '/shots/the-dark-knight-2008-shot2.jpg'],
+        titleShots: ['/shots/the-dark-knight-2008-shot1.jpg', '/shots/the-dark-knight-2008-shot2.jpg'],
+        genres: ["Drama", "Thriller"],
         description: 'A superhero movie about a man who becomes a superhero and fights crime.',
     },
     {
@@ -12,7 +17,10 @@ export const movies = [
         title: 'Stalker',
         year: 1979,
         director: 'Andrey Tarkovsky',
-        poster: '/poster2.jpg',
+        poster: '/posters/stalker-1979-poster.jpg',
+        shots: ['/shots/stalker-1979-shot.jpg', '/shots/stalker-1979-shot1.jpg', '/shots/stalker-1979-shot2.jpg'],
+        titleShots: ['/shots/stalker-1979-shot.jpg'],
+        genres: ["Drama", "Thriller"],
         description: 'A movie about a man who goes on a journey with two strangers to a forbidden zone.',
     },
     {
@@ -20,7 +28,10 @@ export const movies = [
         title: 'Mirror',
         year: 1975,
         director: 'Andrey Tarkovsky',
-        poster: '/poster3.jpg',
+        poster: '/posters/mirror-1975-poster.jpg',
+        shots: ['/shots/mirror-1975-shot.jpg'],
+        titleShots: ['/shots/mirror-1975-shot.jpg'],
+        genres: ["Drama"],
         description: 'A movie about a man who discovers a mirror that shows him his future.',
     },
     {
@@ -28,7 +39,10 @@ export const movies = [
         title: 'Fight Club',
         year: 1999,
         director: 'David Fincher',
-        poster: '/poster4.jpg',
+        poster: '/posters/fight-club-1999-poster.jpg',
+        shots: ['/shots/fight-club-1999-shot.jpg', '/shots/fight-club-1999-shot1.jpg', '/shots/fight-club-1999-shot2.jpg'],
+        titleShots: ['/shots/fight-club-1999-shot.jpg', '/shots/fight-club-1999-shot1.jpg', '/shots/fight-club-1999-shot2.jpg'],
+        genres: ["Drama", "Thriller"],
         description: 'A movie about a man who starts a fight club to escape his life.',
     },
     {
@@ -36,7 +50,10 @@ export const movies = [
         title: 'Donnie Darko',
         year: 2001,
         director: 'Richard Kelly',
-        poster: '/poster5.jpg',
+        poster: '/posters/donnie-darko-2001-poster.jpg',
+        shots: ['/shots/donnie-darko-2001-shot.jpg', '/shots/donnie-darko-2001-shot1.jpg'],
+        titleShots: ['/shots/donnie-darko-2001-shot.jpg', '/shots/donnie-darko-2001-shot1.jpg'],
+        genres: ["Drama", "Thriller"],
         description: 'A movie about a man who wakes up from a coma to find that he is a time traveler.',
     },
     {
@@ -44,7 +61,10 @@ export const movies = [
         title: 'Solaris',
         year: 1972,
         director: 'Andrey Tarkovsky',
-        poster: '/poster6.jpg',
+        poster: '/posters/solaris-1972-poster.jpg',
+        shots: ['/shots/solaris-1972-shot.jpg', '/shots/solaris-1972-shot1.jpg'],
+        titleShots: ['/shots/solaris-1972-shot.jpg', '/shots/solaris-1972-shot1.jpg'],
+        genres: ["Drama", "Thriller"],
         description: 'A movie about a man who discovers that he is a time traveler and that he is in love with a woman who is a time traveler.',
     },
 ];

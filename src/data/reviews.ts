@@ -4,7 +4,7 @@ export const reviews: ReviewData[] = [
     {
         id: 1,
         username: "lilBroke",
-        avatar: "/public/chris.jpg",
+        avatar: "/chris.jpg",
         movieId: 6,
         rating: 5,
         liked: false,
@@ -14,7 +14,7 @@ export const reviews: ReviewData[] = [
     {
         id: 2,
         username: "rap_igrok",
-        avatar: "/public/kanye.webp",
+        avatar: "/kanye.webp",
         movieId: 6,
         rating: 5,
         liked: false,
@@ -24,7 +24,7 @@ export const reviews: ReviewData[] = [
     {
         id: 3,
         username: "movielover",
-        avatar: "/public/fignushka1.jpg",
+        avatar: "/fignushka1.jpg",
         movieId: 6,
         rating: 3,
         liked: true,
@@ -34,7 +34,7 @@ export const reviews: ReviewData[] = [
     {
         id: 4,
         username: "2beerCOOLez",
-        avatar: "/public/dante.jpg",
+        avatar: "/dante.jpg",
         movieId: 6,
         rating: 5,
         liked: false,
@@ -44,7 +44,7 @@ export const reviews: ReviewData[] = [
     {
         id: 5,
         username: "lil fimoz",
-        avatar: "/public/iamfuckhead.webp",
+        avatar: "/iamfuckhead.webp",
         movieId: 6,
         rating: 4,
         liked: false,
@@ -54,7 +54,7 @@ export const reviews: ReviewData[] = [
     {
         id: 6,
         username: "lil fimoz",
-        avatar: "/public/iamfuckhead.webp",
+        avatar: "/iamfuckhead.webp",
         movieId: 5,
         rating: 5,
         liked: true,
@@ -64,7 +64,7 @@ export const reviews: ReviewData[] = [
     {
         id: 7,
         username: "2beerCOOLez",
-        avatar: "/public/dante.jpg",
+        avatar: "/dante.jpg",
         movieId: 5,
         rating: 5,
         liked: false,
@@ -74,7 +74,7 @@ export const reviews: ReviewData[] = [
     {
         id: 8,
         username: "lil bruh",
-        avatar: "/public/chris.jpg",
+        avatar: "/chris.jpg",
         movieId: 6,
         rating: 5,
         liked: true,
@@ -84,7 +84,7 @@ export const reviews: ReviewData[] = [
     {
         id: 9,
         username: "arthas",
-        avatar: "/public/chris.jpg",
+        avatar: "/chris.jpg",
         movieId: 6,
         rating: 5,
         liked: false,
@@ -94,7 +94,7 @@ export const reviews: ReviewData[] = [
     {
         id: 10,
         username: "eblan2",
-        avatar: "/public/chris.jpg",
+        avatar: "/chris.jpg",
         movieId: 6,
         rating: 1,
         liked: false,

@@ -1,83 +1,77 @@
+import { useState } from 'react';
+import { FeaturedMovie } from '../components/FeaturedMovie';
 import { FilmPoster } from '../components/FilmPoster';
 import { Rating } from '../components/Rating';
 import { ReviewCard } from '../components/ReviewCard';
 import { movies } from '../data/movies';
 
 export const HomePage = () => {
+  const [featuredMovie] = useState(() => {
+    const randomIndex = Math.floor(Math.random() * movies.length);
+    return movies[randomIndex];
+  });
+
   return (
     <div className="relative min-h-main bg-[#12151a]">
       <div className="gradient" />
       <div className="relative z-10 max-w-[950px] mx-auto pt-16">
-        <h1 className="text-[#EEF0F2] text-center text-2xl font-light mb-8">
+        <h1 className="text-[#EEF0F2] text-center text-2xl font-light mb-9">
           Welcome back, empathy. Here's what we've been watching...
         </h1>
-        <section className="mb-[64px]">
+
+        <FeaturedMovie 
+          movieId={featuredMovie.id} 
+          title={featuredMovie.title}
+          year={featuredMovie.year}
+          shots={featuredMovie.titleShots}
+          genres={featuredMovie.genres}
+        />
+
+        <section className="mb-9">
           <h2 className="text-gray-400 font-normal text-[14px] pb-1 border-b border-gray-500 mb-3">
-            NEW ON KINODAWN
+            NEW
           </h2>
           <ul className="flex justify-between">
             <ReviewCard
-              poster="../../public/poster1.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/solaris-1972-poster.jpg"
+              avatar="/chris.jpg"
               rating={5}
-              hasComment
-              rewatched
-              date="Aug 29"
+              liked
             />
 
             <ReviewCard
-              poster="../../public/poster2.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/donnie-darko-2001-poster.jpg"
+              avatar="/dante.jpg"
               rating={2.5}
-              hasComment={false}
-              rewatched={false}
-              date="Aug 29"
             />
 
             <ReviewCard
-              poster="../../public/poster3.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/fight-club-1999-poster.jpg"
+              avatar="/iamfuckhead.webp"
               rating={3.5}
-              hasComment={false}
-              rewatched
-              date="Aug 29"
             />
 
             <ReviewCard
-              poster="../../public/poster4.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/mirror-1975-poster.jpg"
+              avatar="/fignushka1.jpg"
               rating={1}
-              hasComment
-              rewatched={false}
-              date="Aug 29"
             />
 
             <ReviewCard
-              poster="../../public/poster5.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/stalker-1979-poster.jpg"
+              avatar="/kanye.webp"
               rating={4.5}
-              hasComment={false}
-              rewatched={false}
-              date="Aug 29"
+              liked
             />
 
             <ReviewCard
-              poster="../../public/poster6.jpg"
-              avatar="../../public/chris.jpg"
-              username="empathy"
+              poster="/posters/the-dark-knight-2008-poster.jpg"
+              avatar="/goku-scary.jpg"
               rating={2.5}
-              hasComment={false}
-              rewatched
-              date="Aug 29"
             />
           </ul>
         </section>
-        <section className="mb-[64px]">
+        <section className="mb-9">
           <h2 className="text-gray-400 font-normal text-[14px] pb-1 border-b border-gray-500 mb-3">
             POPULAR WITH FRIENDS
           </h2>
@@ -92,21 +86,21 @@ export const HomePage = () => {
             ))}
           </ul>
         </section>
-        <section className="pb-[64px]">
+        <section className="pb-[100px]">
           <h2 className="text-gray-400 font-normal text-[14px] pb-1 border-b border-gray-500 mb-3">
             POPULAR REVIEWS THIS WEEK
           </h2>
           <li className="w-[450px] mx-[15px] mb-[32px] pb-[20px] border-b border-[#7E8185] text-[#b8bcc3]">
             <div className="mb-[20px] flex">
               <img
-                src="../../public/poster2.jpg"
+                src="/posters/the-dark-knight-2008-poster.jpg"
                 alt="Постер"
                 className="w-[75px] h-[112px] mr-[20px]"
               />
               <div>
                 <div className="flex gap-2">
                   <img
-                    src="../../public/chris.jpg"
+                    src="/chris.jpg"
                     alt="Avatar"
                     className="w-[24px] h-[24px] rounded-full "
                   />
@@ -114,8 +108,8 @@ export const HomePage = () => {
                 </div>
                 <div>
                   <div className="flex flex-column items-center gap-2">
-                    <h1 className="text-2xl font-bold my-[10px]">Fuckhead retard nigga balls</h1>
-                    <span>2025</span>
+                    <h1 className="text-2xl font-bold my-[10px]">The Dark Knight</h1>
+                    <span>1979</span>
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -140,7 +134,7 @@ export const HomePage = () => {
               </div>
             </div>
             <div>
-              <div>Хуйня, переделывай</div>
+              <div>Бетмен придурок он не может защитить готем а вот жокир крутой он загадочный он гребаный циник</div>
               <div className="flex gap-2 items-center mt-[16px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
