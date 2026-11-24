@@ -10,7 +10,7 @@ export const movies: Movie[] = [
         shots: ['/shots/the-dark-knight-2008-shot.jpg', '/shots/the-dark-knight-2008-shot1.jpg', '/shots/the-dark-knight-2008-shot2.jpg'],
         titleShots: ['/shots/the-dark-knight-2008-shot1.jpg', '/shots/the-dark-knight-2008-shot2.jpg'],
         genres: ["Drama", "Thriller"],
-        description: 'A superhero movie about a man who becomes a superhero and fights crime.',
+        description: 'Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.',
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const movies: Movie[] = [
         shots: ['/shots/stalker-1979-shot.jpg', '/shots/stalker-1979-shot1.jpg', '/shots/stalker-1979-shot2.jpg'],
         titleShots: ['/shots/stalker-1979-shot.jpg'],
         genres: ["Drama", "Thriller"],
-        description: 'A movie about a man who goes on a journey with two strangers to a forbidden zone.',
+        description: 'Near a gray and unnamed city is the Zone, a place guarded by barbed wire and soldiers, and where the normal laws of physics are victim to frequent anomalies. A stalker guides two men into the Zone, specifically to an area in which deep-seated desires are granted.',
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ export const movies: Movie[] = [
         shots: ['/shots/mirror-1975-shot.jpg'],
         titleShots: ['/shots/mirror-1975-shot.jpg'],
         genres: ["Drama"],
-        description: 'A movie about a man who discovers a mirror that shows him his future.',
+        description: 'A dying man in his forties recalls his childhood, his mother, the war and personal moments that tell of and juxtapose pivotal moments in Soviet history with daily life.',
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ export const movies: Movie[] = [
         shots: ['/shots/fight-club-1999-shot.jpg', '/shots/fight-club-1999-shot1.jpg', '/shots/fight-club-1999-shot2.jpg'],
         titleShots: ['/shots/fight-club-1999-shot.jpg', '/shots/fight-club-1999-shot1.jpg', '/shots/fight-club-1999-shot2.jpg'],
         genres: ["Drama", "Thriller"],
-        description: 'A movie about a man who starts a fight club to escape his life.',
+        description: 'A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground “fight clubs” forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.',
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ export const movies: Movie[] = [
         shots: ['/shots/donnie-darko-2001-shot.jpg', '/shots/donnie-darko-2001-shot1.jpg'],
         titleShots: ['/shots/donnie-darko-2001-shot.jpg', '/shots/donnie-darko-2001-shot1.jpg'],
         genres: ["Drama", "Thriller"],
-        description: 'A movie about a man who wakes up from a coma to find that he is a time traveler.',
+        description: 'After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.',
     },
     {
         id: 6,
@@ -65,6 +65,6 @@ export const movies: Movie[] = [
         shots: ['/shots/solaris-1972-shot.jpg', '/shots/solaris-1972-shot1.jpg'],
         titleShots: ['/shots/solaris-1972-shot.jpg', '/shots/solaris-1972-shot1.jpg'],
         genres: ["Drama", "Thriller"],
-        description: 'A movie about a man who discovers that he is a time traveler and that he is in love with a woman who is a time traveler.',
+        description: 'A psychologist is sent to a space station orbiting a planet called Solaris to investigate the death of a doctor and the mental problems of cosmonauts on the station. He soon discovers that the water on the planet is a type of brain which brings out repressed memories and obsessions.',
     },
 ];

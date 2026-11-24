@@ -3,8 +3,9 @@ export type ReviewData = {
     username: string;
     avatar: string;
     movieId: number;
-    rating: number | null;
+    rating?: number;
     liked: boolean;
     text: string;
     date: number;
+    likes: number;
 };

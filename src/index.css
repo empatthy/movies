@@ -19,7 +19,7 @@
   z-index: 0;
 }
 
-ul, ol, li {
+ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;

@@ -4,12 +4,18 @@ import { FilmPoster } from '../components/FilmPoster';
 import { Rating } from '../components/Rating';
 import { ReviewCard } from '../components/ReviewCard';
 import { movies } from '../data/movies';
+import { reviews } from '../data/reviews';
+import { Heart } from 'lucide-react';
 
 export const HomePage = () => {
   const [featuredMovie] = useState(() => {
     const randomIndex = Math.floor(Math.random() * movies.length);
     return movies[randomIndex];
   });
+
+  const popularReviews = [...reviews]
+    .sort((a, b) => b.likes - a.likes)
+    .slice(0, 6);
 
   return (
     <div className="relative min-h-main bg-[#12151a]">
@@ -87,74 +93,67 @@ export const HomePage = () => {
           </ul>
         </section>
         <section className="pb-[100px]">
-          <h2 className="text-gray-400 font-normal text-[14px] pb-1 border-b border-gray-500 mb-3">
+          <h2 className="text-gray-400 font-normal text-[14px] pb-1 border-b border-gray-500 mb-6">
             POPULAR REVIEWS THIS WEEK
           </h2>
-          <li className="w-[450px] mx-[15px] mb-[32px] pb-[20px] border-b border-[#7E8185] text-[#b8bcc3]">
-            <div className="mb-[20px] flex">
-              <img
-                src="/posters/the-dark-knight-2008-poster.jpg"
-                alt="Постер"
-                className="w-[75px] h-[112px] mr-[20px]"
-              />
-              <div>
-                <div className="flex gap-2">
+          <ul className="columns-1 md:columns-2 gap-8">
+            {popularReviews.map(review => (
+              <li key={review.id} className="break-inside-avoid mb-6 pb-4 border-b border-[#4e5053] text-[#b8bcc3]">
+                <div className="flex gap-4">
                   <img
-                    src="/chris.jpg"
-                    alt="Avatar"
-                    className="w-[24px] h-[24px] rounded-full "
+                    src={movies.filter(movie => movie.id === review.movieId)[0].poster}
+                    alt="Постер"
+                    className="w-20 h-fit aspect-[2/3] object-cover rounded-sm border border-[#2d3030]"
                   />
-                  <span className="">empathy</span>
-                </div>
-                <div>
-                  <div className="flex flex-column items-center gap-2">
-                    <h1 className="text-2xl font-bold my-[10px]">The Dark Knight</h1>
-                    <span>1979</span>
+
+                  <div className='flex-1 min-w-0'>
+                    <h3 className="text-lg font-bold text-gray-200 mb-1">
+                      {movies.filter(movie => movie.id === review.movieId)[0].title}
+
+                      <span className='ml-2 text-sm font-normal text-gray-400'>
+                        {movies.filter(movie => movie.id === review.movieId)[0].year}
+                      </span>
+                    </h3>
+                    
+                    <div className="flex items-center gap-2 mb-4 text-[#00a83a]">
+                      {review.rating && <Rating value={review.rating}/>}
+                      {review.liked && <Heart size={14} fill="#db8441" className='text-[#db8441]'/>}
+                    </div>
+
+                    <p className='text-sm leading-relaxed text-gray-200 line-clamp-6'>
+                      {review.text}
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-2">
-                  <div className="text-[#00E054]">
-                    <Rating value={4} />
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-5 h-5 text-[#FF9010]">
-                    <path
-                      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-           2 5.42 4.42 3 7.5 3
-           c1.74 0 3.41.81 4.5 2.09
-           C13.09 3.81 14.76 3 16.5 3
-           19.58 3 22 5.42 22 8.5
-           c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              
+                <div className="flex items-center gap-2 mt-4">
+                  <div className='flex items-center gap-1 hover:text-gray-200 transition-colors'>
+                    <Heart
+                      aria-label="like"
+                      size={16} 
+                      className=""
+                      fill="none"
                     />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>Бетмен придурок он не может защитить готем а вот жокир крутой он загадочный он гребаный циник</div>
-              <div className="flex gap-2 items-center mt-[16px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-5 h-5 text-[#8c8f93]">
-                  <path
-                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-           2 5.42 4.42 3 7.5 3
-           c1.74 0 3.41.81 4.5 2.09
-           C13.09 3.81 14.76 3 16.5 3
-           19.58 3 22 5.42 22 8.5
-           c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                    <span className='text-sm font-bold'>
+                      Like review
+                    </span>
+                  </div>
+                    
+                  <span className="text-xs text-gray-400">
+                    {review.likes} likes
+                  </span>
+                  <img
+                    src={review.avatar}
+                    alt="Avatar"
+                    className="ml-auto w-6 h-6 rounded-full"
                   />
-                </svg>
-                <span>like review</span>
-                <span className="text-sm font-light">10 likes</span>
-              </div>
-            </div>
-          </li>
+                  <span className='text-sm'>
+                    {review.username}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </div>

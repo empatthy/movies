@@ -55,10 +55,11 @@ export const MoviePage = () => {
             username: "user",
             avatar: "/kanye.webp",
             movieId: Number(movieId),
-            rating: myRating,
+            ...(myRating !== null && {rating: myRating}),
             liked: false,
             text: reviewText,
-            date: Date.now()
+            date: Date.now(),
+            likes: 0
         };
 
         setSavedReviews((previousReviews) => [
@@ -80,7 +81,7 @@ export const MoviePage = () => {
                     <img 
                         src={movie.poster} 
                         alt={movie.title} 
-                        className="w-full object-cover" 
+                        className="w-full object-cover border border-[#3b4149] rounded-md overflow-hidden" 
                     />
                 </div>
                 <div className="min-w-0">
@@ -88,7 +89,7 @@ export const MoviePage = () => {
                         <div className="flex-1 min-w-0">
 
                             <div className="flex items-baseline gap-3">
-                                <h1 className="text-3xl font-bold font-film">
+                                <h1 className="text-3xl font-bold">
                                     {movie.title}
                                 </h1>
                                 <p className="text-gray-400">

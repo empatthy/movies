@@ -10,7 +10,7 @@ export const Rating = ({ value }: RatingProps) => {
   const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
 
   return (
-    <div className='flex items-center text-[#9b9ea4]'>
+    <div className='flex items-center'>
       {Array.from({length: fullStars}).map((_, index) => (
         <Star key={index} fill="currentColor" size={14}/>
       ))}

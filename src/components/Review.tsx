@@ -5,7 +5,7 @@ interface ReviewProps {
     id: number;
     avatar: string;
     username: string;
-    rating: number | null;
+    rating?: number;
     liked: boolean;
     text: string;
     date: number;
